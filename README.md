@@ -84,7 +84,7 @@ sasl.mechanism=PLAIN
 sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="$ConnectionString" password="Endpoint=sb://mynamespace.servicebus.windows.net/;SharedAccessKeyName=XXXXXX;SharedAccessKey=XXXXXX;EntityPath=XXXXXX";
 ```
 
-### Run the producer from command line
+### Run the producer from the CLI
 
 This sample is configured to send messages to a Kafka topic that corresponds with your Custom App. In this case obtain the `EntityPath` value from the connection string, since we provide that as a command line argument to the Producer class.
 
@@ -101,9 +101,11 @@ mvn exec:java -Dexec.mainClass="TestProducer" -Dexec.args="<EntityIdValue>"
 
 The producer will now begin sending events to the Fabric Custom App via the Kafka-enabled Event Hub. 
 
-## From Event Stream to KQL-Database
+## From Eventstream to KQL-Database
 
-We can now create a KQL-database that will receive the messages from the Eventstream. Based on the sample messages we just send, Eventstreams is capable of parsing our JSON data, and displaying it in a table.
+TODO!
+
+We can now create a KQL-database that will receive the messages from the Eventstream. Based on the sample messages we've just sent, Eventstreams is capable of parsing our JSON data, and displaying it in a table.
 
 Select the Eventstream in the center of the screen.
 
@@ -113,7 +115,11 @@ Once you select it, you will see the preview table below being populated with yo
 
 ![Eventstream table](./media/eventstream-table.png)
 
-Now, select "New destination", and then select "KQL Database" from the dropdown menu. Name your destination "es-to-kql". Enter your Workspace name, and finally name your KQL Database as "es-to-kql-database". Then select "Create and configure".
+Now, select "New destination", and then select "KQL Database" from the dropdown menu. 
+
+![New Destination](./media/eventstream-new-destination.png)
+
+Name your destination "es-to-kql". Enter your Workspace name, and finally name your KQL Database as "es-to-kql-database". Then select "Create and configure".
 
 ![KQL Database](./media/eventstream-kql-destination.png)
 
