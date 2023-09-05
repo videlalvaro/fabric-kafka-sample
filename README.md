@@ -103,11 +103,17 @@ The producer will now begin sending events to the Fabric Custom App via the Kafk
 
 ## From Eventstream to KQL-Database
 
-TODO!
+Before start working with Eventstreams, you need to create a KQL Database. This is the database that will hold the data that you send to the Eventstream.
 
-We can now create a KQL-database that will receive the messages from the Eventstream. Based on the sample messages we've just sent, Eventstreams is capable of parsing our JSON data, and displaying it in a table.
+### Create the KQL Database
 
-Select the Eventstream in the center of the screen.
+In your Fabric workspace, select New, and then choose "KQL Database" from the dropdown menu. Name your database "es-to-kql-database", and select "Create".
+
+![KQL Database](./media/kql-database.png)
+
+### Configure the Eventstream
+
+Back in the Eventstream page, select the Eventstream in the center of the screen.
 
 ![Eventstream table](./media/eventstream-select.png)
 
@@ -123,7 +129,7 @@ Name your destination "es-to-kql". Enter your Workspace name, and finally name y
 
 ![KQL Database](./media/eventstream-kql-destination.png)
 
-### Create the KQL Table
+### Stream the data to a KQL Table
 
 Now it's time to configure the KQL Table that will hold our realtime data. Name the table "from-kafka-kql-table" and select "Next: Source".
 
@@ -174,9 +180,9 @@ From here on you can use the KQL Database as your bulding block for further proc
 
 In this quickstart you have learned how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview). 
 
-You have learned how to create an Eventstream, that uses a Custom App as source for receiving data from Kafka.
+You learned how to create an Eventstream, that uses a Custom App as source for receiving data from Kafka.
 
-You have also ran your first KQL Query. 
+You have also ran your first KQL Query, and now are ready to explore the world of real-time analytics. Time to create your first Power BI report!
 
 # Keep learning
 
