@@ -1,12 +1,12 @@
 # Send messages to Synapse Real-Time Analytics in Fabric for Apache Kafka Ecosystems - Java
 
-**This quickstart is based on the official [Azure Event Hubs for Kafka](https://github.com/Azure/azure-event-hubs-for-kafka) example, adapted to work with [Microsoft Fabric](https://www.microsoft.com/microsoft-fabric).**
+**This quickstart is based on the official [Azure Event Hubs for Kafka](https://github.com/Azure/azure-event-hubs-for-kafka) example, adapted to work with [Microsoft Fabric](https://aka.ms/fabric-trial).**
 
-This example will show you how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview).
+This example will show you how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview?WT.mc_id=data-106285-alvidela).
 
 You will use a Fabric Eventstream to receive data from Kafka, and then send it to a KQL-database for further processing. Eventstreams support Custom Apps that are backed by an Event Hub. This makes Fabric Eventstreams compatible with Kafka, so you can use any Kafka client to send data to Fabric.
 
-If you want to learn more about how Fabric supports Kafka, check out [What is Azure Event Hubs for Apache Kafka](https://learn.microsoft.com/en-us/azure/event-hubs/azure-event-hubs-kafka-overview)).
+If you want to learn more about how Fabric supports Kafka, check out [What is Azure Event Hubs for Apache Kafka](https://learn.microsoft.com/azure/event-hubs/azure-event-hubs-kafka-overview?WT.mc_id=data-106285-alvidela).
 
 ## Prerequisites
 
@@ -24,9 +24,9 @@ In addition:
 
 ## Create an Eventstream
 
-To create an Eventstream, you need to have a [Fabric workspace](https://learn.microsoft.com/en-us/fabric/get-started/create-workspaces).
+To create an Eventstream, you need to have a [Fabric workspace](https://learn.microsoft.com/fabric/get-started/create-workspaces?WT.mc_id=data-106285-alvidela).
 
-Once you have your workspace, you can create an Eventstream by selecting the "Create" button, and the scrolling down until you see the Eventstream option. Full documentation on how to create an Eventstream can be found [here](https://learn.microsoft.com/en-us/fabric/real-time-analytics/event-streams/create-manage-an-eventstream).
+Once you have your workspace, you can create an Eventstream by selecting the "Create" button, and the scrolling down until you see the Eventstream option. Full documentation on how to create an Eventstream can be found [here](https://learn.microsoft.com/fabric/real-time-analytics/event-streams/create-manage-an-eventstream?WT.mc_id=data-106285-alvidela).
 
 Name your Eventstream "kafka-to-kql-eventstream", and select "Create".
 
@@ -174,11 +174,11 @@ If all went well you should see your query results like this:
 
 ![KQL Table Query](./media/kql-table-query.png)
 
-From here on you can use the KQL Database as your bulding block for further processing,like generating Power BI reports. For more information on how to use KQL, check out the [Kusto Query Language (KQL) overview](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/) documentation.
+From here on you can use the KQL Database as your bulding block for further processing,like generating Power BI reports. For more information on how to use KQL, check out the [Kusto Query Language (KQL) overview](https://learn.microsoft.com/azure/data-explorer/kusto/query/?WT.mc_id=data-106285-alvidela) documentation.
 
 # Conclusion
 
-In this quickstart you have learned how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview). 
+In this quickstart you have learned how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview?WT.mc_id=data-106285-alvidela). 
 
 You learned how to create an Eventstream, that uses a Custom App as source for receiving data from Kafka.
 
@@ -186,6 +186,6 @@ You have also ran your first KQL Query, and now are ready to explore the world o
 
 # Keep learning
 
-- [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview)
-- [What is Azure Event Hubs for Apache Kafka](https://learn.microsoft.com/en-us/azure/event-hubs/azure-event-hubs-kafka-overview)
-- [Kusto Query Language (KQL) overview](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/)
+- [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview?WT.mc_id=data-106285-alvidela)
+- [What is Azure Event Hubs for Apache Kafka](https://learn.microsoft.com/azure/event-hubs/azure-event-hubs-kafka-overview?WT.mc_id=data-106285-alvidela)
+- [Kusto Query Language (KQL) overview](https://learn.microsoft.com/azure/data-explorer/kusto/query/?WT.mc_id=data-106285-alvidela)
