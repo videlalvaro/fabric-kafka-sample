@@ -1,6 +1,6 @@
 # Send and Receive Messages in Java using Azure Event Hubs for Apache Kafka Ecosystems
 
-** This quickstart is based on the official [Azure Event Hubs for Kafka](https://github.com/Azure/azure-event-hubs-for-kafka), adapted to work with [Microsoft Fabric](https://www.microsoft.com/microsoft-fabric).
+**This quickstart is based on the official [Azure Event Hubs for Kafka](https://github.com/Azure/azure-event-hubs-for-kafka) example, adapted to work with [Microsoft Fabric](https://www.microsoft.com/microsoft-fabric).**
 
 This example will show you how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview).
 
