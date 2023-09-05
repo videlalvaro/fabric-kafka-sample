@@ -147,7 +147,7 @@ Select "Next: Summary".
 
 Now you will see the "Continuous ingestion from Eventstream established" screen, finishing the process of setting up your Custom App, ingesting data from Kafka, and sending it to a KQL Database.
 
-![KQL Table Summary](./media/kql-table-summary.png)
+![KQL Table Summary](./media/kql-table-status.png)
 
 ### Query the KQL Table
 
