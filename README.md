@@ -4,7 +4,7 @@
 
 This example will show you how to send data from Kafka to [Synapse Real-time Analytics in Fabric](https://learn.microsoft.com/fabric/real-time-analytics/overview?WT.mc_id=data-106285-alvidela).
 
-You will use a Fabric Eventstream to receive data from Kafka, and then send it to a KQL-database for further processing. Eventstreams support Custom Apps that are backed by an Event Hub. This makes Fabric Eventstreams compatible with Kafka, so you can use any Kafka client to send data to Fabric.
+You will use a Fabric Eventstream to receive data from Kafka, and then send it to a KQL-database for further processing. Eventstream support Custom Apps that are backed by an Event Hub. This makes Fabric Eventstream compatible with Kafka, so you can use any Kafka client to send data to Fabric.
 
 If you want to learn more about how Fabric supports Kafka, check out [What is Azure Event Hubs for Apache Kafka](https://learn.microsoft.com/azure/event-hubs/azure-event-hubs-kafka-overview?WT.mc_id=data-106285-alvidela).
 
@@ -103,7 +103,7 @@ The producer will now begin sending events to the Fabric Custom App via the Kafk
 
 ## From Eventstream to KQL-Database
 
-Before start working with Eventstreams, you need to create a KQL Database. This is the database that will hold the data that you send to the Eventstream.
+Before start working with Eventstream, you need to create a KQL Database. This is the database that will hold the data that you send to the Eventstream.
 
 ### Create the KQL Database
 
