@@ -1,4 +1,4 @@
-# Send and Receive Messages in Java using Azure Event Hubs for Apache Kafka Ecosystems
+# Send messages to Synapse Real-Time Analytics in Fabric for Apache Kafka Ecosystems - Java
 
 **This quickstart is based on the official [Azure Event Hubs for Kafka](https://github.com/Azure/azure-event-hubs-for-kafka) example, adapted to work with [Microsoft Fabric](https://www.microsoft.com/microsoft-fabric).**
 
@@ -86,4 +86,3 @@ mvn exec:java -Dexec.mainClass="TestProducer" -Dexec.args="<EntityIdValue>"
 ```
 
 The producer will now begin sending events to the Fabric Custom App via the Kafka-enabled Event Hub. 
-
