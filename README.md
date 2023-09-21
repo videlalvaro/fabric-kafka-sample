@@ -34,11 +34,17 @@ Name your Eventstream "kafka-to-kql-eventstream", and select "Create".
 
 ## Create a Custom App
 
-After you have created your Eventstream, select "New source", and then select "Custom App". Name your custom app "from-kafka". 
+After you have created your Eventstream, select "New source", and then select "Custom App".
 
-Once the custom app is created, you will see the connection string for your Eventstream in the _Information_ panel at the bottom. Copy this _Connection string-primary key_, as you will need it later.
+![New Custom App](./media/custom-app-new-source)
 
-![Custom App](./media/custom-app.png)
+Name your custom app "from-kafka". 
+
+![Custom App](./media/new-custom-app-from-kafka.png)
+
+Once the custom app is created, select it. You will see the EventHub connection string for your Eventstream in the _Information_ panel at the bottom. Copy this _Connection string-primary key_, as you will need it later.
+
+![Custom App](./media/custom-app-event-hub-connection-string.png)
 
 ### FQDN
 
@@ -96,7 +102,8 @@ To run the producer from the command line, generate the JAR and then run from wi
 
 ```bash
 mvn clean package
-mvn exec:java -Dexec.mainClass="TestProducer" -Dexec.args="<EntityIdValue>"
+mvn exec:java -Dexec.mainClass="TestProducer" \
+-Dexec.args="<EntityIdValue>"
 ```
 
 The producer will now begin sending events to the Fabric Custom App via the Kafka-enabled Event Hub. 
@@ -115,11 +122,11 @@ In your Fabric workspace, select New, and then choose "KQL Database" from the dr
 
 Back in the Eventstream page, select the Eventstream in the center of the screen.
 
-![Eventstream table](./media/eventstream-select.png)
+![Eventstream table](./media/event-stream-select-empty.png)
 
 Once you select it, you will see the preview table below being populated with your data:
 
-![Eventstream table](./media/eventstream-table.png)
+![Eventstream table](./media/event-stream-preview-table.png)
 
 Now, select "New destination", and then select "KQL Database" from the dropdown menu. 
 
@@ -127,9 +134,9 @@ Now, select "New destination", and then select "KQL Database" from the dropdown 
 
 Name your destination "es-to-kql". Enter your Workspace name, and finally name your KQL Database as "es-to-kql-database". Then select "Create and configure".
 
-![KQL Database](./media/eventstream-kql-destination.png)
+![KQL Database](./media/new-destination-kql-database.png)
 
-### Stream the data to a KQL Table
+### Ingest the data to a KQL Table
 
 Now it's time to configure the KQL Table that will hold our realtime data. Name the table "from-kafka-kql-table" and select "Next: Source".
 
@@ -145,7 +152,7 @@ Then on schema wait until the data is loaded in the preview. Then select the "Da
 
 Select "Next: Summary".
 
-Now you will see the "Continuous ingestion from Eventstream established" screen, finishing the process of setting up your Custom App, ingesting data from Kafka, and sending it to a KQL Database.
+Now you will see the “Continuous ingestion from Eventstream established” screen. Select "Close" to finis the process of setting up your Custom App, ingesting data from Kafka, and sending it to a KQL Database.
 
 ![KQL Table Summary](./media/kql-table-status.png)
 
@@ -153,15 +160,11 @@ Now you will see the "Continuous ingestion from Eventstream established" screen,
 
 Close the previous confirmation screen. In the information pane at the bottom, you will see the "Status" marked as "Successful". Below you will have a link to your KQL Database. Select "Open item".
 
-![KQL Table Status](./media/kql-table-status.png)
+![KQL Table Status](./media/kql-open-item.png)
 
 This will open a new tab with your KQL Database. Select your table in the Data tree pane, and then select "Explore your data".
 
-At the moment the table is empty, since the previous data you sent was a sample before the connection was created. So go back to the command line, and run the producer again. This time, the data will be sent to the KQL Database.
-
-```bash
-mvn exec:java -Dexec.mainClass="TestProducer" -Dexec.args="<EntityIdValue>"
-```
+![KQL Table Status](./media/kql-explore-your-data.png)
 
 Type the following query in the query editor and select "Run":
 

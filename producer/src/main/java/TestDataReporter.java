@@ -21,7 +21,16 @@ public class TestDataReporter implements Runnable {
 
     @Override
     public void run() {
-        for(int i = 0; i < NUM_MESSAGES; i++) {                
+        int i = 0;
+        
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Shuting down the producer.");
+            }
+        }));
+        
+        while (true) {
             long time = System.currentTimeMillis();
             String msg = generateMessage();
             System.out.println("Test Data #" + i + " from thread #" + Thread.currentThread().getId());
@@ -36,7 +45,6 @@ public class TestDataReporter implements Runnable {
                 }
             });
         }
-        System.out.println("Finished sending " + NUM_MESSAGES + " messages from thread #" + Thread.currentThread().getId() + "!");
     }
 
     // generate random JSON message with a timestamp, temperature, and humidity field
